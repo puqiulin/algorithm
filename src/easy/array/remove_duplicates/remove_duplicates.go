@@ -2,7 +2,7 @@ package remove_duplicates
 
 import "fmt"
 
-// Naive Approach (Using extra space)
+// RemoveDuplicates naive approach [time complexity:O(n),auxiliary space:O(n)]
 func RemoveDuplicates(nums []int) int {
 	// Return if array is empty or only a single element
 	n := len(nums)
@@ -34,7 +34,7 @@ func RemoveDuplicates(nums []int) int {
 	return index
 }
 
-// Efficient Approach (Maintaining a separate index for the same array )
+// RemoveDuplicates2 efficient approach [time complexity:O(n),auxiliary space:O(1)]
 func RemoveDuplicates2(nums []int) int {
 	// Return if array is empty or only a single element
 	n := len(nums)
