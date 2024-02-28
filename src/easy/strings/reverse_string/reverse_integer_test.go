@@ -31,7 +31,7 @@ var tests = []Test{
 	},
 }
 
-func TestReverseString(t *testing.T) {
+func TestReverseInteger(t *testing.T) {
 	for _, test := range tests {
 		t.Run(test.name, func(t *testing.T) {
 			output := reverseInteger(test.input)

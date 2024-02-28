@@ -1,4 +1,4 @@
-package string_to_integer
+package longest_common_prefix
 
 import (
 	"fmt"
@@ -9,32 +9,27 @@ import (
 
 type Test struct {
 	name     string
-	input    string
-	expected int
+	input    []string
+	expected string
 }
 
 var tests = []Test{
 	{
 		name:     "Test1",
-		input:    "42",
-		expected: 42,
+		input:    []string{"flower", "flow", "flight"},
+		expected: "fl",
 	},
 	{
 		name:     "Test2",
-		input:    "   -42",
-		expected: -42,
-	},
-	{
-		name:     "Test3",
-		input:    "4193 with words",
-		expected: 4193,
+		input:    []string{"dog", "racecar", "car"},
+		expected: "",
 	},
 }
 
-func TestMyAtoi(t *testing.T) {
+func TestLongestCommonPrefix(t *testing.T) {
 	for _, test := range tests {
 		t.Run(test.name, func(t *testing.T) {
-			output := myAtoi(test.input)
+			output := longestCommonPrefix(test.input)
 			assert.Equal(t, test.expected, output, fmt.Sprintf("error: %v vs %v", output, test.expected))
 		})
 	}

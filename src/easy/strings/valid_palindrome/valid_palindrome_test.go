@@ -31,7 +31,7 @@ var tests = []Test{
 	},
 }
 
-func TestIsAnagram(t *testing.T) {
+func TestIsPalindrome(t *testing.T) {
 	for _, test := range tests {
 		t.Run(test.name, func(t *testing.T) {
 			output := isPalindrome(test.input)
